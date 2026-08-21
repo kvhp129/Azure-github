@@ -1,0 +1,77 @@
+ [
+    {
+        "name": "validLogin",
+        "username": "Admin",
+        "password": "admin123",
+        "expectedResult": "success"
+    },
+
+    {
+        "name": "invalidPassword",
+        "username": "Admin",
+        "password": "wrongpassword",
+        "expectedResult": "Invalid credentials"
+    },
+
+    {
+        "name": "invalidUsername",
+        "username": "wronguser",
+        "password": "admin123",
+        "expectedResult": "Invalid credentials"
+    },
+
+    {
+        "name": "invalidCredentials",
+        "username": "wronguser",
+        "password": "wrongpassword",
+        "expectedResult": "Invalid credentials"
+    },
+
+    {
+        "name": "emptyUsername",
+        "username": "",
+        "password": "admin123",
+        "expectedResult": "Required"
+    },
+
+    {
+        "name": "emptyPassword",
+        "username": "Admin",
+        "password": "",
+        "expectedResult": "Required"
+    },
+
+   
+
+    {
+        "name": "usernameWithSpaces",
+        "username": "   ",
+        "password": "admin123",
+        "expectedResult": "Required"
+    },
+
+    {
+        "name": "passwordWithSpaces",
+        "username": "Admin",
+        "password": "   ",
+        "expectedResult": "Required"
+    },
+
+   
+    {
+        "name": "specialCharacters",
+        "username": "@Admin#",
+        "password": "@123$%",
+        "expectedResult": "Invalid credentials"
+    },
+    {
+    "name": "emptyCredentials",
+    "username": "",
+    "password": "",
+    "expectedResult": "Required",
+    "errorCount": 2
+   }
+
+   
+ ]
+
