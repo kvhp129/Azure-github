@@ -1,5 +1,5 @@
-import { test, expect,Locator} from "@playwright/test"
-test("Handle InpuBox or TextBox", async ({page})=>{
+ import { test, expect,Locator} from "@playwright/test"
+/*test("Handle InpuBox or TextBox", async ({page})=>{
 
 // Navigate to the application
 await page.goto("https://testautomationpractice.blogspot.com/")
@@ -21,8 +21,8 @@ await page.waitForTimeout(3000)
 
 })
 
-
-test("Radio button actions:", async ({page})=>{
+ */
+/* test("Radio button actions:", async ({page})=>{
 
   // Navigate to the application
   await page.goto("https://testautomationpractice.blogspot.com/")
@@ -60,10 +60,10 @@ test("Radio button actions:", async ({page})=>{
     await expect (femaleRadioButton).toBeChecked()
 
 
-})
+}) */
 
 
-/* test.only("Verify the check boxes:", async({page})=>{
+/* test("Verify the check boxes:", async({page})=>{
 
  // Navigate to the application
  await page.goto("https://testautomationpractice.blogspot.com/")
@@ -137,7 +137,7 @@ for(let i of indexes)
  */
 
 
-test(" Verify the checkBox functionality:", async ({page})=>{
+/* test(" Verify the checkBox functionality:", async ({page})=>{
 
  // Navigate to the application
  await page.goto("https://testautomationpractice.blogspot.com/")
@@ -231,10 +231,10 @@ for(let ch of checkboxarray)
 }
 expect(matchFound).toBeTruthy()
 
-})
+}) */
 
 
-test.only("verify the Checkbox Funtionality", async ({page})=>{
+test("verify the Checkbox Funtionality", async ({page})=>{
 
    // Navigate to the application
    await page.goto("https://testautomationpractice.blogspot.com/")

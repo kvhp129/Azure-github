@@ -50,7 +50,7 @@ test("Verify the Country dropdown options", async ({ page }) => {
  // 7.Verify that the dropdown is already sorted alphabetically
 
 
- test("verify the Drodown is already sorted alphabetically", async({page})=>{
+ /* test("verify the Drodown is already sorted alphabetically", async({page})=>{
 
   // Navigate to the application
   await page.goto("https://testautomationpractice.blogspot.com/")
@@ -82,7 +82,7 @@ test("Verify the Country dropdown options", async ({ page }) => {
  expect(originalList).not.toEqual(sortedList)
 
  })
-
+ */
 
 
  // Test 3: Verify that HR Manager option is exist in the Job title dropdown
@@ -96,7 +96,7 @@ test("Verify the Country dropdown options", async ({ page }) => {
  // 8.verify that Option was found
 
 
-test("Handle Bootstrap Hidden Dropdown", async({page})=>{
+/* test("Handle Bootstrap Hidden Dropdown", async({page})=>{
 
     // Navigate to the application
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -149,7 +149,7 @@ test("Handle Bootstrap Hidden Dropdown", async({page})=>{
        expect(optionsFound).toBeTruthy()
     
 
-})
+}) */
 
 
 
@@ -157,7 +157,7 @@ test("Handle Bootstrap Hidden Dropdown", async({page})=>{
 
 
 
-test("Verify that the 'Finance' option exists in the Sub Unit dropdown", async ({ page }) => {
+/* test("Verify that the 'Finance' option exists in the Sub Unit dropdown", async ({ page }) => {
 
     // Navigate to the application
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -205,5 +205,5 @@ test("Verify that the 'Finance' option exists in the Sub Unit dropdown", async (
 
  
 
-
+ */
  

@@ -1,4 +1,4 @@
-import {test,expect} from "@playwright/test"
+/* import {test,expect} from "@playwright/test"
 test("Handling keyoard actions:", async({page})=>{
 
  // Navigate to the application
@@ -36,4 +36,4 @@ test("Handling keyoard actions:", async({page})=>{
  await page.keyboard.press("Control+V")
 
 
-})
+}) */

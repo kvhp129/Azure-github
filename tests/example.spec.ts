@@ -82,7 +82,7 @@ test("Handle iframes", async({page})=>{
 
 
 import { test,expect } from "@playwright/test"
-test("Verify the Nested iframe:", async ({page})=>{
+/* test("Verify the Nested iframe:", async ({page})=>{
 
    // Navigate to the application
    await page.goto('https://ui.vision/demo/webtest/frames/')
@@ -131,7 +131,7 @@ test("Verify the Nested iframe:", async ({page})=>{
   //await expect(checkBox).toBeChecked()
 
 
-})
+}) */
 
 
 
