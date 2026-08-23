@@ -1,34 +1,31 @@
-import {test,expect} from "@playwright/test"
-import fs from "fs"
+import { test,expect} from "@playwright/test"
 
-test("Generate text file and download it to the specified location", async ({page})=>{
+test("Handle JavaScript alert dialog",async({page})=>{
 
   // Navigate to the application
-  await page.goto("https://testautomationpractice.blogspot.com/p/download-files_25.html")
-  
-  // Locate the input field
-  const inputBox=page.locator("#inputText")
+  await page.goto("https://testautomationpractice.blogspot.com/")
 
-  // Verify that the inputbox is visible
-  await expect(inputBox).toBeVisible()
+  // Register Dialog handler
+  page.on('dialog', async (dialog)=>{
 
-  // Enter the text
-  await inputBox.fill("Csk team playing 11: Rutu (c),Brevis")
+    // Capture the dialog type and message
+    const dialogType=dialog.type()
+    const dialogMessage=dialog.message()
+    console.log("Dialog type:",dialogType)
+    console.log("Dilaog mesage",dialogMessage)
 
-  // Generate the text file
-  await page.locator("#generateTxt").click()
+    // Accept the dialoge
+    await dialog.accept()
 
-  // Click the download button and wait for download event simultaneously
-  const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#txtDownloadLink').click()])
+    // Verify that the dialog type and message
 
-  // Save the download file to the download folder
-  const downloadPath='downloads/cskfile.txt'
-  await download.saveAs(downloadPath)
+    expect(dialogType).toBe(alert)
+    expect(dialogMessage).toContain("I am an alert box!")
 
-  // Verify that the file exist 
- const fileExists=fs.existsSync(downloadPath)
- 
-expect(fileExists).toBeTruthy()
+    // Click the Alert button
+    await page.locator("#alertBtn").click()
+
+  })
 
 
 
